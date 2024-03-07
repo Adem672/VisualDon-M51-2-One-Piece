@@ -3,18 +3,17 @@
 ## Contexte ⭕️
 
 **D'où viennent les données, qui les a créées et dans quel contexte ?**\
-Pour ce projet, nous allons utilisé des données trouvées sur des sites et blogs spécialisés dans One Piece. Ces données ont été crées par des fans du manga afin de documenter chaque personnage, chaque moment et chaque élément du manga.
+Les données utilisées dans ce projet proviennent de sites et de blogs spécialisés dans l'univers de One Piece. Elles ont été créées par des fans du manga dans le but de documenter chaque aspect du monde de One Piece, y compris les personnages, les lieux, et les événements.
 
 ## Description 📃
 
 **Comment sont structurées les données ?**\
-Parler du format, des attributs et du type de données
-Les données seront déparées en différents fichiers json. Un pour les personnages, un pour les lieux etc. Ces différents fichiers sont structurés avec un format clé-valeur. Nous les utiliserons à l'aide des fetch afin de récupérer les données et de les manipuler.
+Les données sont organisées en différents fichiers JSON, chaque fichier représentant un aspect spécifique de l'univers de One Piece, tels que les personnages, les lieux, etc. Ces fichiers suivent un format clé-valeur et seront manipulés à l'aide de requêtes fetch pour récupérer et traiter les données.
 
 ## But 🎯
 
 **Qu'est-ce que vous voulez découvrir ? Des tendances ? Vous voulez explorer ou expliquer ?**\
-Notre projet a pour but de faire (re)découvrir l'univers de One Piece au travers d'un site sous forme de timeline. Nous voulons créer un lieu de centralisation pour la vaste quantité de données que nous présente One Piece.
+L'objectif de ce projet est de permettre aux utilisateurs de (re)découvrir l'univers riche et complexe de One Piece à travers un site web organisé sous forme de timeline. Nous souhaitons offrir un espace centralisé pour explorer la vaste quantité de données présentées dans One Piece et plus particulièrement la première saga : East Blue.
 
 ## Références 🔗
 

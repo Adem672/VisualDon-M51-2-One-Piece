@@ -19,7 +19,7 @@ Notre projet a pour but de faire (re)découvrir l'univers de One Piece au traver
 ## Références 🔗
 
 **Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?**\
-Les différents sites de fandom, qui utilisent régulièrement ces données dans le but de créer des théories et des graphiques sur l'histoire. Les responsable commerciaux du merchandising one piece, qui les utilisent dans le  but de déterminer la popularité des personnages ou des évènements pour créer des produits dérivés.
+Les différents sites de fandom, qui utilisent régulièrement ces données dans le but de créer des théories et des graphiques sur l'histoire. Par exemple, le one Piece wiki, qui fournit des descriptions et des shémas détaillées pour les différents personnages et lieux de l'histoire. On peut également citer les responsable commerciaux du merchandising one piece, qui utilisent les données dans le  but de déterminer la popularité des personnages ou des évènements pour créer des produits dérivés.
 
 ## Wireframes 🖊️
 

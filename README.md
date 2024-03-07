@@ -22,3 +22,6 @@ Les différents sites de fandom, qui utilisent régulièrement ces données dans
 
 ## Wireframes 🖊️
 
+Lien pour le figma : https://www.figma.com/team_invite/redeem/utp2ZXGXwYTNoj29CLrNhQ 
+
+

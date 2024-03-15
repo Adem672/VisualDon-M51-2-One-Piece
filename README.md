@@ -18,10 +18,8 @@ L'objectif de ce projet est de permettre aux utilisateurs de (re)découvrir l'un
 ## Références 🔗
 
 **Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?**\
-Les différents sites de fandom, qui utilisent régulièrement ces données dans le but de créer des théories et des graphiques sur l'histoire. Par exemple, le one Piece wiki, qui fournit des descriptions et des shémas détaillées pour les différents personnages et lieux de l'histoire. On peut également citer les responsable commerciaux du merchandising one piece, qui utilisent les données dans le  but de déterminer la popularité des personnages ou des évènements pour créer des produits dérivés.
+Les différents sites de fandom, qui utilisent régulièrement ces données dans le but de créer des théories et des graphiques sur l'histoire. Par exemple, le One Piece wiki, qui fournit des descriptions et des schémas détaillés pour les différents personnages et lieux de l'histoire. On peut également citer les responsables commerciaux du merchandising One Piece, qui utilisent les données dans le but de déterminer la popularité des personnages ou des évènements pour créer des produits dérivés.
 
 ## Wireframes 🖊️
 
 Lien pour le figma : https://www.figma.com/file/YtIxn8VgK0pkBnQV4U17cQ/Untitled?type=design&node-id=0%3A1&mode=design&t=JiOdzX3rxmbhgE8M-1
-
-

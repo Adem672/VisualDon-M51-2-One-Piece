@@ -1,13 +1,17 @@
 // Charger le fichier JSON (remplacer "chemin/vers/votre/fichier.json" par le chemin réel de votre fichier JSON)
-fetch('../data/one-piece.json')
-    .then(response => response.json())
-    .then(data => {
-        // Une fois le JSON chargé, appeler une fonction pour afficher les données dans le HTML
-        afficherDonnees(data);
-    })
-    .catch(error => {
-        console.error('Erreur de chargement du fichier JSON:', error);
-    });
+
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const req = await fetch("../data/one-piece.json");
+        if (!req.ok) {
+            throw new Error(`Failed to fetch: ${req.status}`);
+        }
+        const rep = await req.json();
+        afficherDonnees(rep);
+    } catch (error) {
+        console.error('Error fetching JSON:', error);
+    }
+})
 
 // Fonction pour afficher les données dans le HTML
 function afficherDonnees(data) {
@@ -18,12 +22,22 @@ function afficherDonnees(data) {
     for (const arc in data.Arcs) {
         const arcData = data.Arcs[arc];
         const arcDiv = document.createElement('div');
-        arcDiv.innerHTML = `
-      <h2>${arcData.Nom}</h2>
-      <p>Membres de l'équipage : ${arcData.Membres_Chapeau_de_Paille.join(', ')}</p>
-      <p>Personnes affrontées : ${arcData.Personnes_affrontees.join(', ')}</p>
-      <hr>
-    `;
+
+        const title = document.createElement("h2");
+        title.textContent = arcData.Nom;
+
+        const equipage = document.createElement("p");
+        equipage.textContent = `Membres de l'équipage : ${arcData.Membres_Chapeau_de_Paille.join(', ')}`;
+
+        const ennemis = document.createElement("p");
+        equipage.textContent = `Personnes affrontées : ${arcData.Personnes_affrontees.join(', ')}`;
+
+        const hr = document.createElement("hr");
+        
+        arcDiv.appendChild(title);
+        arcDiv.appendChild(equipage);
+        arcDiv.appendChild(ennemis);
+        arcDiv.appendChild(hr);
         conteneur.appendChild(arcDiv);
     }
 }

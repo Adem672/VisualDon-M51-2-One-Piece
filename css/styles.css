@@ -1,0 +1,61 @@
+body {
+    font-family: Roboto;
+    overflow: hidden;
+    width: 100vw;
+}
+
+/* Scroll snapping */
+.mandatory-scroll-snapping {
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+/* Titles */
+#title {
+    font-size: 7vw !important;
+    text-align: end;
+    width: 100vw;
+    padding: 0;
+}
+
+.arc-background h2 {
+    text-transform: uppercase;
+}
+
+/* Content */
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.arc-background, #title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* width: fit-content; */
+    width: 90vw;
+    height: 100vh;
+    color: white;
+    font-size: 1.5vw;
+    padding: 0 5vw;
+    scroll-snap-align: center;
+}
+
+/* Set background and make it less bright */
+.arc-background::before,
+#title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/wallpaperbetter.com_3840x2160.jpg");
+    background-size: cover;
+    background-position: bottom;
+    filter:brightness(0.5);
+    z-index: -1;
+}

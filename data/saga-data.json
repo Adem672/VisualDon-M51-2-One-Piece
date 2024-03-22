@@ -1,0 +1,109 @@
+{
+    "Saga": {
+        "Nom": "East Blue",
+        "Arcs": {
+            "Arc_Romance_Dawn": {
+                "Nom": "Romance Dawn",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro"
+                ],
+                "Personnes_affrontees": [
+                    "Alvida",
+                    "Morgan",
+                    "Hermep",
+                    "Marines"
+                ],
+                "Chapitres": 7,
+                "Episodes": 3
+            },
+            "Arc_Ville_Orange": {
+                "Nom": "Ville d'Orange",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro",
+                    "Nami"
+                ],
+                "Personnes_affrontees": [
+                    "Baggy",
+                    "Morge",
+                    "Richie",
+                    "Carnage"
+                ],
+                "Chapitres": 14,
+                "Episodes": 5
+            },
+            "Arc_Village_Sirop": {
+                "Nom": "Village Sirop",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro",
+                    "Nami",
+                    "Usopp"
+                ],
+                "Personnes_affrontees": [
+                    "Kuro",
+                    "Buchi",
+                    "Sham",
+                    "Pirates du Chat Noir"
+                ],
+                "Chapitres": 20,
+                "Episodes": 10
+            },
+            "Arc_Baratie": {
+                "Nom": "Baratie",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro",
+                    "Nami",
+                    "Usopp",
+                    "Sanji"
+                ],
+                "Personnes_affrontees": [
+                    "Mihawk",
+                    "Don Krieg",
+                    "Fullbody",
+                    "Pearl",
+                    "Gin"
+                ],
+                "Chapitres": 27,
+                "Episodes": 12
+            },
+            "Arc_Arlong_Park": {
+                "Nom": "Arlong Park",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro",
+                    "Nami",
+                    "Usopp",
+                    "Sanji"
+                ],
+                "Personnes_affrontees": [
+                    "Arlong",
+                    "Kuroobi",
+                    "Hachi",
+                    "Smack",
+                    "Meuh-Meuh"
+                ],
+                "Chapitres": 27,
+                "Episodes": 15
+            },
+            "Arc_Loguetown": {
+                "Nom": "Loguetown",
+                "Membres_Chapeau_de_Paille": [
+                    "Luffy",
+                    "Zoro",
+                    "Nami",
+                    "Usopp",
+                    "Sanji"
+                ],
+                "Personnes_affrontees": [
+                    "Smoker",
+                    "Tashigi"
+                ],
+                "Chapitres": 5,
+                "Episodes": 6
+            }
+        }
+    }
+}

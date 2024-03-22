@@ -1,16 +1,8 @@
-// Charger le fichier JSON (remplacer "chemin/vers/votre/fichier.json" par le chemin réel de votre fichier JSON)
+import data from "../data/one-piece.json";
 
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const req = await fetch("../data/one-piece.json");
-        if (!req.ok) {
-            throw new Error(`Failed to fetch: ${req.status}`);
-        }
-        const rep = await req.json();
-        afficherDonnees(rep);
-    } catch (error) {
-        console.error('Error fetching JSON:', error);
-    }
+// Charger le fichier JSON (remplacer "chemin/vers/votre/fichier.json" par le chemin réel de votre fichier JSON)
+document.addEventListener("DOMContentLoaded", () => {
+    afficherDonnees(data);
 })
 
 // Fonction pour afficher les données dans le HTML

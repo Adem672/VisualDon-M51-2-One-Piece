@@ -13,6 +13,8 @@ body {
 
 /* Titles */
 #title {
+    justify-content: center;
+    align-items: center;
     font-size: 7vw !important;
     text-align: end;
     width: 100vw;
@@ -30,10 +32,9 @@ body {
     grid-auto-flow: column;
 }
 
-.arc-background, #title {
+.arc-background,
+#title {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     /* width: fit-content; */
     width: 90vw;
@@ -53,9 +54,54 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../img/wallpaperbetter.com_3840x2160.jpg");
+    background-image: url("../img/baratie.jpg");
     background-size: cover;
     background-position: bottom;
-    filter:brightness(0.5);
+    filter: brightness(0.5);
     z-index: -1;
+}
+
+/* Triple columns arc display */
+.arc-background > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left {
+    width: 25vw;
+}
+
+.center {
+    justify-content: space-between;
+    width: 50vw;
+}
+
+.right {
+    width: 25vw;
+}
+
+/* Progress bar */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 8px;
+    background: #045daa;
+    width: 0%;
 }

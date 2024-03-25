@@ -1,4 +1,6 @@
 {
+  "type": "module",
+  "main": "src/app.js",
   "name": "visualdon-m51-2-one-piece",
   "version": "1.0.0",
   "description": "Saga East-Blue",
@@ -12,5 +14,8 @@
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
   }
 }

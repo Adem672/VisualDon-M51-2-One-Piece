@@ -15,7 +15,6 @@ conteneur.addEventListener('scroll', () => {
 // Charger le fichier JSON (remplacer "chemin/vers/votre/fichier.json" par le chemin réel de votre fichier JSON)
 document.addEventListener("DOMContentLoaded", () => {
     afficherDonnees();
-    // applyCSS();
 })
 
 // Fonction pour afficher les données dans le HTML
@@ -39,7 +38,6 @@ function afficherDonnees() {
         right.classList.add("right");
 
         arcBackground.classList.add("arc-background");
-        // arcBackground.style.backgroundImage = `url("../img/${arcData.Image}")`;
 
         const dataDiv = document.createElement("div");
         dataDiv.classList.add("arc-data");
@@ -82,29 +80,4 @@ function afficherDonnees() {
         // Append graphs
         createBarChart(center, [arcData.Chapitres, arcData.Episodes]);
     }
-}
-
-function applyCSS() {
-    // Create a new style element
-    const styleElement = document.createElement('style');
-    let newBackgroundImageRule;
-
-    Object.keys(data.Saga.Arcs).forEach(arc => {
-        const image = data.Saga.Arcs[arc].Image;
-
-        // Define the new background image CSS rule
-        newBackgroundImageRule = `
-    .arc-background::before,
-    #title::before {
-        background-image: url("${image}") !important;
-    }
-`;
-    })
-
-    // Append the new CSS rule to the style element
-    styleElement.innerHTML = newBackgroundImageRule;
-
-    // Append the style element to the document's head
-    // document.head.appendChild(styleElement);
-
 }

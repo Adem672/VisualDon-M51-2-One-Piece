@@ -76,20 +76,21 @@ body {
     writing-mode: sideways-lr;
     font-size: 3.5vw;
     overflow: hidden;
-    /* background-color: #045daa; */
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .arc-title-text {
+    position: absolute;
     margin: 0;
     padding: 0;
     white-space: nowrap;
-    animation: scrollTextUp 16s linear infinite;
+    animation: scrollTextUp 12s linear infinite;
 }
 
 .second-text {
-    color: rgb(68, 68, 191);
-    transform: translateY(200%);
-    animation: scrollTextUp-2 16s linear infinite 8s;
+    color: rgb(163, 75, 20);
+    transform: translateY(130vh);
+    animation: scrollTextUp-2 12s linear infinite 6s;
 }
 
 .left {
@@ -133,11 +134,11 @@ body {
 
 /* Animations */
 @keyframes scrollTextUp {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-200%); }
+    0% { transform: translateY(130vh); }
+    100% { transform: translateY(-70vh); }
 }
 
 @keyframes scrollTextUp-2 {
-    0% { transform: translateY(200%); }
-    100% { transform: translateY(-100%); }
+    0% { transform: translateY(130vh); }
+    100% { transform: translateY(-70vh); }
 }

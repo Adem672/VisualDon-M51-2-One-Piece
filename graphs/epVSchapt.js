@@ -43,7 +43,7 @@ export function createBarChart(container, data) {
         .append("text")
         .attr("class", "datalabel")
         .attr("x", (d, i) => xScale(i) + (width / data.length - 1) / 2)
-        .attr("y", d => yScale(d) + 25) // Adjust vertical position of label
+        .attr("y", d => yScale(d) + 20) // Adjust vertical position of label
         .attr("text-anchor", "middle")
         .style("fill", "white")
         .text(d => d);

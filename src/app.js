@@ -29,18 +29,18 @@ function afficherDonnees() {
 
         // Containers
         const arcBackground = document.createElement('div');
+        arcBackground.classList.add("arc-background");
 
+        const dataDiv = document.createElement("div");
+        dataDiv.classList.add("arc-data");
+
+        // Positioning
         const left = document.createElement("div");
         left.classList.add("left");
         const center = document.createElement("div");
         center.classList.add("center");
         const right = document.createElement("div");
         right.classList.add("right");
-
-        arcBackground.classList.add("arc-background");
-
-        const dataDiv = document.createElement("div");
-        dataDiv.classList.add("arc-data");
 
         // Arc title
         const title = document.createElement("h2");
@@ -68,13 +68,17 @@ function afficherDonnees() {
 
         // Append to containers
         center.appendChild(title);
+
         equipage.appendChild(membresAllies);
         left.appendChild(equipage);
+        
         ennemis.appendChild(membresEnnemis);
         right.appendChild(ennemis);
+
         arcBackground.appendChild(left);
         arcBackground.appendChild(center);
         arcBackground.appendChild(right);
+
         conteneur.appendChild(arcBackground);
 
         // Append graphs

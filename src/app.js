@@ -43,8 +43,17 @@ function afficherDonnees() {
         right.classList.add("right");
 
         // Arc title
+        const titleDiv = document.createElement("div");
+        titleDiv.classList.add("arc-title");
+
         const title = document.createElement("h2");
-        title.textContent = arcData.Nom;
+        title.classList.add("arc-title-text");
+        title.textContent += arcData.Nom;
+        
+        const title2 = document.createElement("h2");
+        title2.classList.add("arc-title-text");
+        title2.classList.add("second-text");
+        title2.textContent += arcData.Nom;
 
         // Arc protagonists
         const equipage = document.createElement("p");
@@ -67,14 +76,18 @@ function afficherDonnees() {
         })
 
         // Append to containers
-        center.appendChild(title);
+        titleDiv.appendChild(title);
+        titleDiv.appendChild(title2);
 
         equipage.appendChild(membresAllies);
         left.appendChild(equipage);
-        
+
+        center.appendChild(document.createElement("h3"));
+
         ennemis.appendChild(membresEnnemis);
         right.appendChild(ennemis);
 
+        arcBackground.appendChild(titleDiv);
         arcBackground.appendChild(left);
         arcBackground.appendChild(center);
         arcBackground.appendChild(right);

@@ -1,8 +1,14 @@
 import data from "../data/saga-data.json";
+import charaData from "../data/characters.json";
 import { createBarChart } from "../graphs/epVSchapt.js";
+import { createCircles } from "../graphs/groups.js";
 
 // Récupérer l'élément HTML où vous souhaitez afficher les données
 const conteneur = document.querySelector('.container');
+
+conteneur.addEventListener('wheel', function (e) {
+    conteneur.scrollLeft += e.deltaY;
+});
 
 // When the user scrolls horizontally within the container
 conteneur.addEventListener('scroll', () => {
@@ -28,7 +34,7 @@ function afficherDonnees() {
         const arcData = data.Saga.Arcs[arc];
 
         // Containers
-        const arcBackground = document.createElement('div');
+        const arcBackground = document.createElement('section');
         arcBackground.classList.add("arc-background");
 
         const dataDiv = document.createElement("div");
@@ -49,7 +55,7 @@ function afficherDonnees() {
         const title = document.createElement("h2");
         title.classList.add("arc-title-text");
         title.textContent += arcData.Nom;
-        
+
         const title2 = document.createElement("h2");
         title2.classList.add("arc-title-text");
         title2.classList.add("second-text");
@@ -95,6 +101,9 @@ function afficherDonnees() {
         conteneur.appendChild(arcBackground);
 
         // Append graphs
+        const luffy = {color: "red", radius: 40, label: charaData.Crew.Luffy.Nom};
+        const zoro = {color: "green", radius: 30, label: charaData.Crew.Zoro.Nom};
+        createCircles(left, [luffy, zoro]);
         createBarChart(center, [arcData.Chapitres, arcData.Episodes]);
     }
 }

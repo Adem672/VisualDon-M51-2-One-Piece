@@ -1,14 +1,13 @@
 body {
     font-family: Roboto;
     overflow: hidden;
-    width: 100vw;
 }
 
 /* Scroll snapping */
 .mandatory-scroll-snapping {
     overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
+    /* overscroll-behavior-x: cover;
+    scroll-snap-type: x mandatory; */
 }
 
 /* Titles */
@@ -17,7 +16,7 @@ body {
     align-items: center;
     font-size: 7vw !important;
     text-align: end;
-    width: 100vw;
+    width: 100vw !important;
     padding: 0;
 }
 
@@ -36,12 +35,11 @@ body {
 #title {
     display: flex;
     position: relative;
-    /* width: fit-content; */
-    width: 100vw;
+    width: fit-content;
     height: 100vh;
     color: white;
     font-size: 1.5vw;
-    scroll-snap-align: center;
+    /* scroll-snap-align: start; */
 }
 
 /* Set background and make it less bright */
@@ -66,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 99vh;
 }
 
 .arc-title {
@@ -85,29 +83,30 @@ body {
     margin: 0;
     padding: 0;
     white-space: nowrap;
-    animation: scrollTextUp 12s linear infinite;
+    animation: scrollTextUp 20s linear infinite;
 }
 
 .second-text {
     color: rgb(163, 75, 20);
     transform: translateY(130vh);
-    animation: scrollTextUp-2 12s linear infinite 6s;
+    animation: scrollTextUp-2 20s linear infinite 10s;
 }
 
 .left {
-    width: 20vw;
-    /* background-color: #ccc; */
+    width: 40vw;
+    /* background-color: #cccccc62; */
 }
 
 .center {
     justify-content: space-between;
-    width: 45vw;
-    /* background-color:cornflowerblue; */
+    align-items: center;
+    width: 65vw;
+    /* background-color: rgba(100, 148, 237, 0.347); */
 }
 
 .right {
-    width: 20vw;
-    /* background-color:darksalmon; */
+    width: 40vw;
+    /* background-color: rgba(233, 150, 122, 0.336); */
 }
 
 /* Progress bar */
@@ -122,24 +121,24 @@ body {
 /* The progress container */
 .progress-container {
     width: 100%;
-    height: 8px;
+    height: .8vw;
     background: #ccc;
 }
 
 /* The progress bar */
 .progress-bar {
-    height: 8px;
+    height: .8vw;
     background: #045daa;
     width: 0%;
 }
 
 /* Animations */
 @keyframes scrollTextUp {
-    0% { transform: translateY(130vh); }
-    100% { transform: translateY(-70vh); }
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
 }
 
 @keyframes scrollTextUp-2 {
-    0% { transform: translateY(130vh); }
-    100% { transform: translateY(-70vh); }
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
 }

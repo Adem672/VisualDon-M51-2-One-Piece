@@ -1,0 +1,122 @@
+{
+    "Crew": {
+        "Luffy": {
+            "Nom": "Luffy",
+            "Image": "ok.png"
+        },
+        "Zoro": {
+            "Nom": "Zoro",
+            "Image": "ok.png"
+        },
+        "Nami": {
+            "Nom": "Nami",
+            "Image": "ok.png"
+        },
+        "Usopp": {
+            "Nom": "Usopp",
+            "Image": "ok.png"
+        },
+        "Sanji": {
+            "Nom": "Sanji",
+            "Image": "ok.png"
+        }
+    },
+    "Enemies": {
+        "Alvida": {
+            "Nom": "Alvida",
+            "Image": "ok.png"
+        },
+        "Morgan": {
+            "Nom": "Morgsn",
+            "Image": "ok.png"
+        },
+        "Hermep": {
+            "Nom": "Hermep",
+            "Image": "ok.png"
+        },
+        "Marines": {
+            "Nom": "Marines",
+            "Image": "ok.png"
+        },
+        "Baggy": {
+            "Nom": "Baggy",
+            "Image": "ok.png"
+        },
+        "Morge": {
+            "Nom": "Morge",
+            "Image": "ok.png"
+        },
+        "Richie": {
+            "Nom": "Richie",
+            "Image": "ok.png"
+        },
+        "Carnage": {
+            "Nom": "Carnage",
+            "Image": "ok.png"
+        },
+        "Kuro": {
+            "Nom": "Kuro",
+            "Image": "ok.png"
+        },
+        "Buchi": {
+            "Nom": "Buchi",
+            "Image": "ok.png"
+        },
+        "Sham": {
+            "Nom": "Sham",
+            "Image": "ok.png"
+        },
+        "Pirates du Chat Noir": {
+            "Nom": "Pirates du Chat Noir",
+            "Image": "ok.png"
+        },
+        "Mihawk": {
+            "Nom": "Mihawk",
+            "Image": "ok.png"
+        },
+        "Don Krieg": {
+            "Nom": "Don Krieg",
+            "Image": "ok.png"
+        },
+        "Fullbody": {
+            "Nom": "Fullbody",
+            "Image": "ok.png"
+        },
+        "Pearl": {
+            "Nom": "Pearl",
+            "Image": "ok.png"
+        },
+        "Gin": {
+            "Nom": "Gin",
+            "Image": "ok.png"
+        },
+        "Arlong": {
+            "Nom": "Arlong",
+            "Image": "ok.png"
+        },
+        "Kuroobi": {
+            "Nom": "Kuroobi",
+            "Image": "ok.png"
+        },
+        "Hachi": {
+            "Nom": "Hachi",
+            "Image": "ok.png"
+        },
+        "Smack": {
+            "Nom": "Smack",
+            "Image": "ok.png"
+        },
+        "Meuh-Meuh": {
+            "Nom": "Meuh-Meuh",
+            "Image": "ok.png"
+        },
+        "Smoker": {
+            "Nom": "Smoker",
+            "Image": "ok.png"
+        },
+        "Tashigi": {
+            "Nom": "Tashigi",
+            "Image": "ok.png"
+        }
+    }
+}

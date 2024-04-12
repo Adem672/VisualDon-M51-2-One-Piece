@@ -77,6 +77,7 @@ body {
     font-size: 3.5vw;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .3);
+    transform: rotate(180deg);
 }
 
 .arc-title-text {
@@ -134,11 +135,11 @@ body {
 
 /* Animations */
 @keyframes scrollTextUp {
-    100% { transform: translateY(130vh); }
-    0% { transform: translateY(-70vh); }
+    0% { transform: translateY(130vh); }
+    100% { transform: translateY(-70vh); }
 }
 
 @keyframes scrollTextUp-2 {
-    100% { transform: translateY(130vh); }
-    0% { transform: translateY(-70vh); }
+    0% { transform: translateY(130vh); }
+    100% { transform: translateY(-70vh); }
 }

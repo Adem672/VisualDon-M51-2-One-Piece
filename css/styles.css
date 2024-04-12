@@ -73,7 +73,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 15vw;
-    writing-mode: sideways-lr;
+    writing-mode: vertical-lr;
     font-size: 3.5vw;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .3);
@@ -134,11 +134,11 @@ body {
 
 /* Animations */
 @keyframes scrollTextUp {
-    0% { transform: translateY(130vh); }
-    100% { transform: translateY(-70vh); }
+    100% { transform: translateY(130vh); }
+    0% { transform: translateY(-70vh); }
 }
 
 @keyframes scrollTextUp-2 {
-    0% { transform: translateY(130vh); }
-    100% { transform: translateY(-70vh); }
+    100% { transform: translateY(130vh); }
+    0% { transform: translateY(-70vh); }
 }

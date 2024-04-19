@@ -101,8 +101,8 @@ function afficherDonnees() {
         conteneur.appendChild(arcBackground);
 
         // Append graphs
-        const luffy = {color: "red", radius: 40, label: charaData.Crew.Luffy.Nom};
-        const zoro = {color: "green", radius: 30, label: charaData.Crew.Zoro.Nom};
+        const luffy = { color: "red", radius: 40, label: charaData.Crew.Luffy.Nom };
+        const zoro = { color: "green", radius: 30, label: charaData.Crew.Zoro.Nom };
         createCircles(left, [luffy, zoro]);
         createBarChart(center, [arcData.Chapitres, arcData.Episodes]);
     }

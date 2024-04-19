@@ -60,10 +60,19 @@ function animateImage() {
 
 // Event listeners
 document.addEventListener("click", e => {
-    switch(e.target.classList[0]) {
+    switch (e.target.classList[0]) {
         case "img":
         case "arc-title":
-            window.location.href = arcPage;
+            let arcTitle = e.target.textContent.trim();
+
+            // Remplacer les espaces et les apostrophes par des tirets et capitaliser chaque mot
+            const formattedTitle = arcTitle.replace(/(?:\s|')+/g, '_') // Remplace les espaces et les apostrophes par des tirets
+                .toLowerCase() // Convertit tout en minuscules
+                .split('_') // Divise la chaîne en tableau de mots
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Met la première lettre en majuscule pour chaque mot
+                .join('_'); // Réassemble les mots avec des tirets
+
+            window.location.href = arcPage + `?name=Arc_${formattedTitle}`;
             break;
     }
 })

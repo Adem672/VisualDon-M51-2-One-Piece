@@ -63,7 +63,7 @@ document.addEventListener("click", e => {
     switch (e.target.classList[0]) {
         case "img":
         case "arc-title":
-            let arcTitle = e.target.textContent.trim();
+            let arcTitle = e.target.parentNode.children[1].textContent;
 
             // Remplacer les espaces et les apostrophes par des tirets et capitaliser chaque mot
             const formattedTitle = arcTitle.replace(/(?:\s|')+/g, '_') // Remplace les espaces et les apostrophes par des tirets

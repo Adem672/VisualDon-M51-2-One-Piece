@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Content */
+#saga-section .container {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-y: hidden;
+}
+
+#saga-section .arc-background {
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: 100vh;
+    color: white;
+    font-size: 1.3vw;
+}
+
+/* Arc display */
+#saga-section .arc-background>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#saga-section .arc-title {
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    writing-mode: vertical-lr;
+    font-size: 3.5vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .3);
+    transform: rotate(180deg);
+}
+
+#saga-section .arc-title .arc-title-text {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    animation: scrollTextUp 20s linear infinite;
+}
+
+#saga-section .arc-title .second-text {
+    color: rgb(163, 75, 20);
+    transform: translateY(130vh);
+    animation: scrollTextUp-2 20s linear infinite 10s;
+}
+
+#saga-section .arc-background .left {
+    width: 40vw;
+    background-color: rgba(204, 204, 204, 0.384);
+}
+
+#saga-section .arc-background .center {
+    justify-content: space-between;
+    align-items: center;
+    width: 65vw;
+    background-color: rgba(100, 148, 237, 0.347);
+}
+
+#saga-section .arc-background .right {
+    width: 40vw;
+    background-color: rgba(233, 150, 122, 0.336);
+}
+
+/* Go back button */
+#saga-section .back {
+    position: absolute;
+    align-self: flex-end;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-right: -4vw;
+    padding: 0 1vw;
+    height: 100vh;
+    border: none;
+    background-color: rgba(141, 141, 141, .8);
+    transition: .3s ease-in-out;
+}
+
+#saga-section .show {
+    margin-right: 0;
+}
+
+/* Slider */
+#saga-section .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes scrollTextUp {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+
+@keyframes scrollTextUp-2 {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}

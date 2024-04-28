@@ -1,3 +1,5 @@
+// https://observablehq.com/@d3/donut-chart/2?intent=fork
+
 import * as d3 from 'd3';
 
 export function epVsChapChart(arcData) {
@@ -48,7 +50,7 @@ export function epVsChapChart(arcData) {
         .attr("transform", d => `translate(${arc.centroid(d)})`)
         .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
             .attr("x", 0)
-            .attr("y", "0.6em")
+            .attr("y", "0.3em")
             .text(d => d.data.value.toLocaleString("en-US")));
 
     // Add text label in the center of the pie chart
@@ -56,20 +58,21 @@ export function epVsChapChart(arcData) {
         .attr("font-size", 30)
         .attr("fill", color("Episodes"))
         .attr("text-anchor", "middle")
-        .attr("dy", "-0.8em") // Adjust the vertical position of the first line
+        .attr("dy", "-0.8em")
         .text("Episodes");
 
     svg.append("text")
         .attr("font-size", 30)
+        .attr("fill", "white")
         .attr("text-anchor", "middle")
-        .attr("dy", "0.5em") // Adjust the vertical position of the second line
+        .attr("dy", "0.5em")
         .text("VS");
 
     svg.append("text")
         .attr("font-size", 30)
         .attr("fill", color("Chapitres"))
         .attr("text-anchor", "middle")
-        .attr("dy", "1.8em") // Adjust the vertical position of the third line
+        .attr("dy", "1.8em")
         .text("Chapitres");
 
     return svg.node();

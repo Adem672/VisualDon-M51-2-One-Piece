@@ -52,19 +52,19 @@
 
 #saga-section .arc-background .left {
     width: 40vw;
-    background-color: rgba(204, 204, 204, 0.384);
+    /* background-color: rgba(204, 204, 204, 0.384); */
 }
 
 #saga-section .arc-background .center {
     justify-content: space-between;
     align-items: center;
     width: 65vw;
-    background-color: rgba(100, 148, 237, 0.347);
+    /* background-color: rgba(100, 148, 237, 0.347); */
 }
 
 #saga-section .arc-background .right {
     width: 40vw;
-    background-color: rgba(233, 150, 122, 0.336);
+    /* background-color: rgba(233, 150, 122, 0.336); */
 }
 
 /* SVG */
@@ -74,6 +74,23 @@
     align-items: end;
     width: inherit;
     height: inherit;
+}
+
+/* Groups */
+.groups {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.character {
+    transition: .2s ease-in-out;
+}
+
+.character:hover {
+    /* filter: brightness(70%); */
+    transform: scale(105%);
 }
 
 .chapVsEps {

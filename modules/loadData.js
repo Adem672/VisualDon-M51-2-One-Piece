@@ -1,5 +1,6 @@
 import saga from "../data/saga-data.json";
 import { epVsChapChart } from "../graphs/epVSchapt.js";
+import { createGroup } from "../graphs/groups.js";
 import { resetScroll } from "./scroll";
 
 const container = document.querySelector('.container');
@@ -41,23 +42,19 @@ export function afficherDonnees(arc) {
     title2.textContent += arcData.Nom;
 
     // Arc protagonists
-    const equipage = document.createElement("p");
-    equipage.textContent = "Membres de l'équipage :";
-    const membresAllies = document.createElement("ul");
+    const equipage = document.createElement("div");
+    equipage.classList.add("groups");
+    const membresAllies = [];
     arcData.Membres_Chapeau_de_Paille.forEach(membre => {
-        const nomMembre = document.createElement("li");
-        nomMembre.textContent = membre;
-        membresAllies.appendChild(nomMembre);
+        membresAllies.push(membre);
     })
 
     // Arc antagonists
-    const ennemis = document.createElement("p");
-    ennemis.textContent = "Ennemis affrontés :";
-    const membresEnnemis = document.createElement("ul");
+    const antagonistes = document.createElement("div");
+    antagonistes.classList.add("groups");
+    const membresEnnemis = [];
     arcData.Personnes_affrontees.forEach(membre => {
-        const nomMembre = document.createElement("li");
-        nomMembre.textContent = membre;
-        membresEnnemis.appendChild(nomMembre);
+        membresEnnemis.push(membre);
     })
 
     // EpVsChart
@@ -70,13 +67,16 @@ export function afficherDonnees(arc) {
     titleDiv.appendChild(title);
     titleDiv.appendChild(title2);
 
-    equipage.appendChild(membresAllies);
+    // equipage.appendChild(membresAllies);
+    const allies = createGroup(membresAllies);
+    equipage.appendChild(allies);
     left.appendChild(equipage);
 
     center.appendChild(pieChartContainer);
 
-    ennemis.appendChild(membresEnnemis);
-    right.appendChild(ennemis);
+    const ennemis = createGroup(membresEnnemis);
+    antagonistes.appendChild(ennemis);
+    right.appendChild(antagonistes);
 
     arcBackground.appendChild(titleDiv);
     arcBackground.appendChild(left);

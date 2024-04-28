@@ -1,24 +1,84 @@
-import { select } from 'd3';
+import * as d3 from 'd3';
+import data from "../data/characters.json";
 
-export function createCircles(container, circleData) {
-    const svg = select(container).append('svg');
+const dimensions = 200;
+const spacing = 50;
+const border = 2;
+
+export function createGroup(characters) {
+    // Filter characters based on the input array
+    const filteredCharacters = characters.filter(character => data.Crew[character] || data.Enemies[character]);
+
+    // Create SVG container
+    const svg = d3.select('body')
+        .append('svg')
+        .attr('height', filteredCharacters.length * (dimensions + spacing) - spacing)
+        .attr('width', (dimensions + border))
+        .classed("characters", true);
+
+    // Define radial gradient
+    const gradient = svg.append('defs')
+        .append('radialGradient')
+        .attr('id', 'radial-gradient')
+        .attr('cx', '50%')
+        .attr('cy', '50%')
+        .attr('r', '50%')
+        .attr('fx', '50%')
+        .attr('fy', '50%');
     
-    svg.selectAll('circle')
-        .data(circleData)
-        .enter()
-        .append('circle')
-        .attr('cx', (d, i) => (i + 1) * (d.radius * 3)) // Adjust spacing between circles
-        .attr('cy', d => d.radius * 2)
-        .attr('r', d => d.radius)
-        .attr('fill', d => d.color)
+    gradient.append('stop')
+        .attr('offset', '50%')
+        .style('stop-color', '#fff');
+    
+    gradient.append('stop')
+        .attr('offset', '100%')
+        .style('stop-color', '#57cae7');
 
-    svg.selectAll('text')
-        .data(circleData)
+    // Create circles and images for each character
+    const charactersGroup = svg.selectAll('.character')
+        .data(filteredCharacters)
         .enter()
-        .append('text')
-        .attr('x', (d, i) => (i + 1) * (d.radius * 3)) // Same x-coordinate as circles
-        .attr('y', d => d.radius * 2) // Same y-coordinate as circles
-        .attr('text-anchor', 'middle') // Center text horizontally
-        .attr('alignment-baseline', 'middle') // Center text vertically
-        .text(d => d.label); // Set text content to label from circleData
+        .append('g')
+        .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + i * (dimensions + spacing)})`);
+
+    // Add circles for gradient fill
+    charactersGroup.append('circle')
+        .attr('r', dimensions / 2)
+        .style('stroke', 'black')
+        .style('stroke-width', border)
+        .style('fill', 'url(#radial-gradient)')
+        .on('click', d => {
+            console.log(`${d} clicked`);
+            // You can add custom functionality here
+        });
+
+    // Add images to circles
+    charactersGroup.each(function (d) {
+        const group = d3.select(this);
+        const imageUrl = `./img/characters/${d.toLowerCase()}.png`;
+
+        // Define unique pattern ID for each character
+        const patternId = `${d.toLowerCase()}-pattern`;
+
+        // Create pattern
+        svg.append('defs')
+            .append('pattern')
+            .attr('id', patternId)
+            .attr('width', 1)
+            .attr('height', 1)
+            .append('image')
+            .attr('xlink:href', imageUrl)
+            .attr('width', dimensions - 20)
+            .attr('height', dimensions - 20)
+            .attr('x', 10)
+            .attr('y', 10);
+
+        // Append image to the group
+        group.append('circle')
+            .attr('r', dimensions / 2)
+            .style('fill', () => `url(#${patternId})`)
+            .classed('character', true);
+    });
+
+    return svg.node();
 }

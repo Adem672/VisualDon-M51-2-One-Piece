@@ -67,6 +67,19 @@
     background-color: rgba(233, 150, 122, 0.336);
 }
 
+/* SVG */
+.svgContainer {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: inherit;
+    height: inherit;
+}
+
+.chapVsEps {
+    margin: 0 2vw 2vw 0;
+}
+
 /* Go back button */
 #saga-section .back {
     position: absolute;
@@ -78,7 +91,7 @@
     height: 100vh;
     border: none;
     background-color: rgba(141, 141, 141, .8);
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 #saga-section .show {
@@ -88,6 +101,7 @@
 /* Slider */
 #saga-section .slider {
     position: absolute;
+    /* width: 160vw; */
     top: 0;
     left: 0;
     height: 100%;

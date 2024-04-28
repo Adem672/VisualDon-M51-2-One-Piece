@@ -1,8 +1,8 @@
 import saga from "../data/saga-data.json";
+import { epVsChapChart } from "../graphs/epVSchapt.js";
 import { resetScroll } from "./scroll";
 
 const container = document.querySelector('.container');
-const slider = document.querySelector('.slider');
 
 export function afficherDonnees(arc) {
     // Reset container
@@ -60,6 +60,12 @@ export function afficherDonnees(arc) {
         membresEnnemis.appendChild(nomMembre);
     })
 
+    // EpVsChart
+    const pieChartContainer = document.createElement("div");
+    pieChartContainer.classList.add("svgContainer");
+    const pieChart = epVsChapChart(arcData);
+    pieChartContainer.appendChild(pieChart);
+
     // Append to containers
     titleDiv.appendChild(title);
     titleDiv.appendChild(title2);
@@ -67,7 +73,7 @@ export function afficherDonnees(arc) {
     equipage.appendChild(membresAllies);
     left.appendChild(equipage);
 
-    center.appendChild(document.createElement("h3"));
+    center.appendChild(pieChartContainer);
 
     ennemis.appendChild(membresEnnemis);
     right.appendChild(ennemis);

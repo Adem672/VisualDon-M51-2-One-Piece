@@ -112,3 +112,31 @@ main section.active {
     background-color: rgba(0, 0, 0, .5);
     padding: 2rem;
 }
+
+@media (max-width: 1300px) {
+    .saga-title {
+        font-size: 3rem !important;
+    }
+
+    .saga-subtitle {
+        font-size: 2rem;
+    }
+
+    .slider {
+        width: 2500px;
+    }
+
+    .item {
+        width: 250px;
+    }
+
+    .img {
+        width: 600px;
+        left: -40px;
+    }
+
+    .home-arc-title {
+        font-size: 1.6rem;
+        padding: 1.5rem;
+    }
+}

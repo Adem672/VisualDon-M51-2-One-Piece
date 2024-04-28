@@ -86,7 +86,7 @@
     align-self: flex-end;
     font-size: 2rem;
     text-transform: uppercase;
-    margin-right: -4vw;
+    margin-right: -4.2vw;
     padding: 0 1vw;
     height: 100vh;
     border: none;
@@ -116,4 +116,10 @@
 @keyframes scrollTextUp-2 {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-100vh); }
+}
+
+@media (max-width: 1300px) {
+    .chapVsEps {
+        width: 200;
+    }
 }

@@ -52,7 +52,7 @@ export function afficherDonnees(arc) {
 
     // Arc antagonists
     const ennemis = document.createElement("p");
-    ennemis.textContent = "Personnes affrontées :";
+    ennemis.textContent = "Ennemis affrontés :";
     const membresEnnemis = document.createElement("ul");
     arcData.Personnes_affrontees.forEach(membre => {
         const nomMembre = document.createElement("li");

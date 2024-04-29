@@ -5,7 +5,7 @@ const items = [...document.querySelectorAll(".item")];
 const arcKeys = Object.keys(saga.Saga.Arcs);
 let counter = 0;
 
-export function initCards() {
+function initCards() {
     // Arc title
     items.forEach(item => {
         const title = document.createElement("p");
@@ -18,4 +18,16 @@ export function initCards() {
     images.forEach((img, index) => {
         img.style.backgroundImage = `url(./img/arcs/${index + 1}.jpg)`;
     })
+
+    resetHome();
 }
+
+function resetHome() {
+    document.querySelector(".slider").style.width = "156vw";
+}
+
+function hideHome() {
+    document.querySelector(".slider").style.width = 0;
+}
+
+export { initCards, resetHome, hideHome }

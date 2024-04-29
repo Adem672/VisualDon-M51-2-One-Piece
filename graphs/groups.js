@@ -1,13 +1,15 @@
 import * as d3 from 'd3';
 import data from "../data/characters.json";
 
-const dimensions = 200;
-const spacing = 50;
+const spacing = 30;
 const border = 2;
 
 export function createGroup(characters) {
     // Filter characters based on the input array
     const filteredCharacters = characters.filter(character => data.Crew[character] || data.Enemies[character]);
+
+    const dimensions = Math.min(window.innerHeight / filteredCharacters.length - spacing, 200);
+    console.log(dimensions);
 
     // Create SVG container
     const svg = d3.select('body')
@@ -25,11 +27,11 @@ export function createGroup(characters) {
         .attr('r', '50%')
         .attr('fx', '50%')
         .attr('fy', '50%');
-    
+
     gradient.append('stop')
         .attr('offset', '50%')
         .style('stop-color', '#fff');
-    
+
     gradient.append('stop')
         .attr('offset', '100%')
         .style('stop-color', '#57cae7');
@@ -39,6 +41,7 @@ export function createGroup(characters) {
         .data(filteredCharacters)
         .enter()
         .append('g')
+        // .classed('circle', true)
         .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + i * (dimensions + spacing)})`);
 
     // Add circles for gradient fill

@@ -112,7 +112,7 @@ main section.active {
     padding: 2rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
     .saga-title {
         font-size: 3rem !important;
     }

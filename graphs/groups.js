@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import data from "../data/characters.json";
+import { findParentKey } from '../modules/jsonFunctions';
 
 const spacing = 30;
 const border = 2;
@@ -33,14 +34,16 @@ export function createGroup(characters) {
 
     gradient.append('stop')
         .attr('offset', '100%')
-        .style('stop-color', '#57cae7');
+        .style('stop-color', () => {
+            const team = findParentKey(data, filteredCharacters[0]);
+            return team == "Crew" ? '#57cae7' : team == "Enemies" ? '#d24444' : '#fff';
+        });
 
     // Create circles and images for each character
     const charactersGroup = svg.selectAll('.character')
         .data(filteredCharacters)
         .enter()
         .append('g')
-        // .classed('circle', true)
         .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + i * (dimensions + spacing)})`);
 
     // Add circles for gradient fill
@@ -48,11 +51,7 @@ export function createGroup(characters) {
         .attr('r', dimensions / 2)
         .style('stroke', 'black')
         .style('stroke-width', border)
-        .style('fill', 'url(#radial-gradient)')
-        .on('click', d => {
-            console.log(`${d} clicked`);
-            // You can add custom functionality here
-        });
+        .style('fill', 'url(#radial-gradient)');
 
     // Add images to circles
     charactersGroup.each(function (d) {
@@ -70,10 +69,10 @@ export function createGroup(characters) {
             .attr('height', 1)
             .append('image')
             .attr('xlink:href', imageUrl)
-            .attr('width', dimensions - 20)
-            .attr('height', dimensions - 20)
-            .attr('x', 10)
-            .attr('y', 10);
+            .attr('width', dimensions - 30)
+            .attr('height', dimensions - 30)
+            .attr('x', 15)
+            .attr('y', 15);
 
         // Append image to the group
         group.append('circle')

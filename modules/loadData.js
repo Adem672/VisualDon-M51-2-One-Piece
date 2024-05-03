@@ -30,7 +30,7 @@ export function afficherDonnees(arc) {
 
     // Arc title
     const titleDiv = document.createElement("div");
-    titleDiv.classList.add("arc-title");
+    titleDiv.classList.add("scrolling-arc-title");
 
     const title = document.createElement("h2");
     title.classList.add("arc-title-text");

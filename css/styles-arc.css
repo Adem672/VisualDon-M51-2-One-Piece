@@ -26,7 +26,7 @@
     height: 100vh;
 }
 
-#saga-section .arc-title {
+#saga-section .scrolling-arc-title {
     display: flex;
     flex-direction: row;
     width: 15vw;
@@ -37,7 +37,7 @@
     transform: rotate(180deg);
 }
 
-#saga-section .arc-title .arc-title-text {
+#saga-section .scrolling-arc-title .arc-title-text {
     position: absolute;
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@
     animation: scrollTextUp 20s linear infinite;
 }
 
-#saga-section .arc-title .second-text {
+#saga-section .scrolling-arc-title .second-text {
     color: rgb(163, 75, 20);
     transform: translateY(130vh);
     animation: scrollTextUp-2 20s linear infinite 10s;
@@ -82,14 +82,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.character {
-    transition: .2s ease-in-out;
-}
-
-.character:hover {
-    transform: scale(105%);
 }
 
 .chapVsEps {

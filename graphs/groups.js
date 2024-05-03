@@ -9,7 +9,6 @@ export function createGroup(characters) {
     const filteredCharacters = characters.filter(character => data.Crew[character] || data.Enemies[character]);
 
     const dimensions = Math.min(window.innerHeight / filteredCharacters.length - spacing, 200);
-    console.log(dimensions);
 
     // Create SVG container
     const svg = d3.select('body')

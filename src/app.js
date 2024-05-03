@@ -26,13 +26,11 @@ document.addEventListener("click", e => {
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Met la première lettre en majuscule pour chaque mot
                 .join('_'); // Réassemble les mots avec des tirets
 
-            hideHome();
             toggleSection("saga");
             afficherDonnees(formattedTitle);
             break;
 
         case "back":
-            resetHome();
             toggleSection("home");
             window.scrollTo(0, memScroll);
             break;

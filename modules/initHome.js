@@ -1,4 +1,5 @@
 import saga from "../data/saga-data.json";
+import { initParallax } from "./parallax";
 
 const images = [...document.querySelectorAll(".img")];
 const items = [...document.querySelectorAll(".item")];
@@ -18,16 +19,6 @@ function initCards() {
     images.forEach((img, index) => {
         img.style.backgroundImage = `url(./img/arcs/${index + 1}.jpg)`;
     })
-
-    resetHome();
 }
 
-function resetHome() {
-    document.querySelector(".slider").style.width = "156vw";
-}
-
-function hideHome() {
-    document.querySelector(".slider").style.width = 0;
-}
-
-export { initCards, resetHome, hideHome }
+export { initCards }

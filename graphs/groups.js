@@ -59,15 +59,13 @@ export function createGroup(characters) {
         .enter()
         .append('g')
         .classed('character', true)
-        .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + i * (dimensions + spacing)})`);
+        .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + border + i * (dimensions + spacing)})`);
 
     // Add circles for gradient fill
     charactersGroup.each(function (d) {
         const group = d3.select(this);
         group.append('circle')
             .attr('r', dimensions / 2)
-            .style('stroke', 'black')
-            .style('stroke-width', border)
             .style('fill', () => {
                 const team = findParentKey(data, d);
                 console.log(team);
@@ -99,6 +97,8 @@ export function createGroup(characters) {
         // Append image to the group
         group.append('circle')
             .attr('r', dimensions / 2)
+            .style('stroke', 'black')
+            .style('stroke-width', border)
             .style('fill', () => `url(#${patternId})`)
     });
 

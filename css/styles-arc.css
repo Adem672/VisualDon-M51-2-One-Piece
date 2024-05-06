@@ -78,12 +78,6 @@
 }
 
 /* Groups */
-.groups {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 /* .character {
     transition: all .2s ease-in-out;
 }

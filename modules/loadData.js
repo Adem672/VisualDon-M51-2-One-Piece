@@ -43,7 +43,6 @@ export function afficherDonnees(arc) {
 
     // Arc protagonists
     const equipage = document.createElement("div");
-    equipage.classList.add("groups");
     const membresAllies = [];
     arcData.Membres_Chapeau_de_Paille.forEach(membre => {
         membresAllies.push(membre);
@@ -57,6 +56,11 @@ export function afficherDonnees(arc) {
         membresEnnemis.push(membre);
     })
 
+    // Arc description
+    const description = document.createElement("p");
+    description.classList.add("arc-description");
+    description.textContent = arcData.Description;
+
     // EpVsChart
     const pieChartContainer = document.createElement("div");
     pieChartContainer.classList.add("svgContainer");
@@ -67,11 +71,11 @@ export function afficherDonnees(arc) {
     titleDiv.appendChild(title);
     titleDiv.appendChild(title2);
 
-    // equipage.appendChild(membresAllies);
     const allies = createGroup(membresAllies);
     equipage.appendChild(allies);
     left.appendChild(equipage);
 
+    center.appendChild(description);
     center.appendChild(pieChartContainer);
 
     const ennemis = createGroup(membresEnnemis);

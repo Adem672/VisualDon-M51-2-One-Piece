@@ -4,6 +4,7 @@ import { findParentKey } from '../modules/jsonFunctions';
 
 const spacing = 30;
 const border = 3;
+const animationDuration = 200;
 
 export function createGroup(characters) {
     // Filter characters based on the input array
@@ -61,21 +62,20 @@ export function createGroup(characters) {
         .classed('character', true)
         .attr('transform', (d, i) => `translate(${(dimensions + border) / 2}, ${dimensions / 2 + border + i * (dimensions + spacing)})`);
 
-    // Add circles for gradient fill
     charactersGroup.each(function (d) {
         const group = d3.select(this);
-        group.append('circle')
+
+        // Add circles for gradient fill
+        const gradiant = group.append('circle')
             .attr('r', dimensions / 2)
             .style('fill', () => {
                 const team = findParentKey(data, d);
                 console.log(team);
                 return team == "Crew" ? 'url(#radial-gradient-allies)' : 'url(#radial-gradient-enemies)';
-            });
-    })
+            })
+            .style('filter', 'brightness(100%)');
 
-    // Add images to circles
-    charactersGroup.each(function (d) {
-        const group = d3.select(this);
+        // Add images to circles
         const imageUrl = `./img/characters/${d.toLowerCase()}.png`;
 
         // Define unique pattern ID for each character
@@ -95,12 +95,36 @@ export function createGroup(characters) {
         // .attr('y', 15);
 
         // Append image to the group
-        group.append('circle')
+        const image = group.append('circle')
             .attr('r', dimensions / 2)
             .style('stroke', 'black')
             .style('stroke-width', border)
             .style('fill', () => `url(#${patternId})`)
-    });
+            .style('filter', 'brightness(100%)');
+
+        // Add text in the center of the circle
+        const text = group.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('dy', '0.35em') // Center the text vertically
+            .attr('fill', 'white')
+            .attr('font-size', '2vw')
+            .attr('font-weight', '700')
+            .attr('stroke', '5px')
+            .classed('character-name', true)
+            .text(d.replaceAll("_", " "));
+
+        // Mouse event handling for showing/hiding text
+        group.on('mouseenter', function () {
+            text.transition().duration(animationDuration).style('opacity', 1); // Show text with transition
+            gradiant.transition().duration(animationDuration).style('filter', 'brightness(40%)');
+            image.transition().duration(animationDuration).style('filter', 'brightness(40%)');
+        })
+            .on('mouseleave', function () {
+                text.transition().duration(animationDuration).style('opacity', 0); // Hide text with transition
+                gradiant.transition().duration(animationDuration).style('filter', 'brightness(100%)');
+                image.transition().duration(animationDuration).style('filter', 'brightness(100%)');
+            });
+    })
 
     return svg.node();
 }

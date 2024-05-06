@@ -84,6 +84,14 @@
     justify-content: center;
 }
 
+/* .character {
+    transition: all .2s ease-in-out;
+}
+
+.character:hover {
+    filter: brightness(50%);
+} */
+
 .chapVsEps {
     margin: 0 2vw 2vw 0;
 }

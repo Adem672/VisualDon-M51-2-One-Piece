@@ -56,9 +56,14 @@
     animation: scrollTextUp-2 20s linear infinite 10s;
 }
 
+#saga-section .arc-description {
+    position: absolute;
+    width: 30vw;
+}
+
 #saga-section .arc-background .left {
     width: 20vw;
-    background-color: rgba(204, 204, 204, 0.384);
+    /* background-color: rgba(204, 204, 204, 0.384); */
 }
 
 #saga-section .arc-background .center {
@@ -70,7 +75,7 @@
 
 #saga-section .arc-background .right {
     width: 40vw;
-    background-color: rgba(233, 150, 122, 0.336);
+    /* background-color: rgba(233, 150, 122, 0.336); */
 }
 
 /* SVG */
@@ -85,7 +90,7 @@
 /* Groups */
 .character-name {
     opacity: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Adjust values as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .chapVsEps {

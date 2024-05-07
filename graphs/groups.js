@@ -66,11 +66,10 @@ export function createGroup(characters) {
         const group = d3.select(this);
 
         // Add circles for gradient fill
-        const gradiant = group.append('circle')
+        const gradient = group.append('circle')
             .attr('r', dimensions / 2)
             .style('fill', () => {
                 const team = findParentKey(data, d);
-                console.log(team);
                 return team == "Crew" ? 'url(#radial-gradient-allies)' : 'url(#radial-gradient-enemies)';
             })
             .style('filter', 'brightness(100%)');
@@ -97,7 +96,7 @@ export function createGroup(characters) {
         // Append image to the group
         const image = group.append('circle')
             .attr('r', dimensions / 2)
-            .style('stroke', 'black')
+            .style('stroke', 'white')
             .style('stroke-width', border)
             .style('fill', () => `url(#${patternId})`)
             .style('filter', 'brightness(100%)');
@@ -107,21 +106,22 @@ export function createGroup(characters) {
             .attr('text-anchor', 'middle')
             .attr('dy', '0.35em') // Center the text vertically
             .attr('fill', 'white')
-            .attr('font-size', '2vw')
+            .attr('font-size', `${dimensions * .01 - d.length * .03}vw`)
             .attr('font-weight', '700')
-            .attr('stroke', '5px')
             .classed('character-name', true)
             .text(d.replaceAll("_", " "));
+
+        console.log(d.replaceAll("_", " ").length);
 
         // Mouse event handling for showing/hiding text
         group.on('mouseenter', function () {
             text.transition().duration(animationDuration).style('opacity', 1); // Show text with transition
-            gradiant.transition().duration(animationDuration).style('filter', 'brightness(40%)');
+            gradient.transition().duration(animationDuration).style('filter', 'brightness(40%)');
             image.transition().duration(animationDuration).style('filter', 'brightness(40%)');
         })
             .on('mouseleave', function () {
                 text.transition().duration(animationDuration).style('opacity', 0); // Hide text with transition
-                gradiant.transition().duration(animationDuration).style('filter', 'brightness(100%)');
+                gradient.transition().duration(animationDuration).style('filter', 'brightness(100%)');
                 image.transition().duration(animationDuration).style('filter', 'brightness(100%)');
             });
     })

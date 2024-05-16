@@ -58,7 +58,9 @@
 
 #saga-section .arc-description {
     position: absolute;
+    align-self: end;
     width: 30vw;
+    line-height: 1.5;
 }
 
 #saga-section .arc-background .left {
@@ -67,10 +69,10 @@
 }
 
 #saga-section .arc-background .center {
-    justify-content: space-between;
-    align-items: center;
-    width: 65vw;
-    background-color: rgba(100, 148, 237, 0.347);
+    justify-content: center;
+    /* align-items: end; */
+    width: 75vw;
+    /* background-color: rgba(100, 148, 237, 0.347); */
 }
 
 #saga-section .arc-background .right {

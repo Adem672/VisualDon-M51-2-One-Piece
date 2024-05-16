@@ -11,6 +11,7 @@ export function createGroup(characters) {
     const filteredCharacters = characters.filter(character => data.Crew[character] || data.Enemies[character]);
 
     const dimensions = Math.min(window.innerHeight / filteredCharacters.length - spacing, 200);
+    const fontSizeFactor = window.innerHeight < 1000 ? .03 : .065;
 
     // Create SVG container
     const svg = d3.select('body')
@@ -106,12 +107,11 @@ export function createGroup(characters) {
             .attr('text-anchor', 'middle')
             .attr('dy', '0.35em') // Center the text vertically
             .attr('fill', 'white')
-            .attr('font-size', `${dimensions * .01 - d.length * .03}vw`)
+            .attr('font-size', `${dimensions * .01 - d.length * fontSizeFactor}vw`)
+            // .attr('font-size', `${dimensions * .01}vw`)
             .attr('font-weight', '700')
             .classed('character-name', true)
             .text(d.replaceAll("_", " "));
-
-        console.log(d.replaceAll("_", " ").length);
 
         // Mouse event handling for showing/hiding text
         group.on('mouseenter', function () {

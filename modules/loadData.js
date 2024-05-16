@@ -79,6 +79,7 @@ export function afficherDonnees(arc) {
         // Arc images
         const img = document.createElement("img");
         img.classList.add("inside-arc-image");
+        
         // Nommer les images nom_arc-1.jpg et nom_arc-2.jpg
         img.style.backgroundImage = `url(./img/inside_arcs/${arcData.Nom.toLowerCase().replace(/(?:\s|')+/g, '_')}-${i}.jpg)`
         center.appendChild(img);

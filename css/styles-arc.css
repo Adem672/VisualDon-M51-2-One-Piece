@@ -65,35 +65,32 @@
 
 #saga-section .arc-background .left {
     width: 20vw;
-    /* background-color: rgba(204, 204, 204, 0.384); */
 }
 
 #saga-section .arc-background .center {
     justify-content: center;
-    /* align-items: end; */
     width: 75vw;
-    /* background-color: rgba(100, 148, 237, 0.347); */
 }
 
 #saga-section .arc-background .right {
     width: 40vw;
-    /* background-color: rgba(233, 150, 122, 0.336); */
 }
 
 /* Inside arcs images */
 .inside-arc-image {
     position: absolute;
+    background-size: cover;
+    background-position: center;
     align-self: start;
     width: 15vw;
     height: 50vh;
-    background-size: cover;
-    background-position: center;
+    margin-left: 10vw;
 }
 
 .inside-arc-image:nth-child(2) {
     height: 40vh;
-    margin-top: 10vw;
-    margin-left: 10vw;
+    margin-top: 15vw;
+    margin-left: 22vw;
 }
 
 /* SVG */

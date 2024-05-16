@@ -91,8 +91,6 @@ export function createGroup(characters) {
             .attr('xlink:href', imageUrl)
             .attr('width', dimensions)
             .attr('height', dimensions);
-        // .attr('x', 15)
-        // .attr('y', 15);
 
         // Append image to the group
         const image = group.append('circle')
@@ -108,7 +106,6 @@ export function createGroup(characters) {
             .attr('dy', '0.35em') // Center the text vertically
             .attr('fill', 'white')
             .attr('font-size', `${dimensions * .01 - d.length * fontSizeFactor}vw`)
-            // .attr('font-size', `${dimensions * .01}vw`)
             .attr('font-weight', '700')
             .classed('character-name', true)
             .text(d.replaceAll("_", " "));

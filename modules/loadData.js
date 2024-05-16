@@ -75,6 +75,14 @@ export function afficherDonnees(arc) {
     equipage.appendChild(allies);
     left.appendChild(equipage);
 
+    for (let i = 1; i <= 2; ++i) {
+        // Arc images
+        const img = document.createElement("img");
+        img.classList.add("inside-arc-image");
+        // Nommer les images nom_arc-1.jpg et nom_arc-2.jpg
+        img.style.backgroundImage = `url(./img/inside_arcs/${arcData.Nom.toLowerCase().replace(/(?:\s|')+/g, '_')}-${i}.jpg)`
+        center.appendChild(img);
+    }
     center.appendChild(description);
     center.appendChild(pieChartContainer);
 

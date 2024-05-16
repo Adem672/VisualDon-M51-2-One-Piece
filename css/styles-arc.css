@@ -80,6 +80,22 @@
     /* background-color: rgba(233, 150, 122, 0.336); */
 }
 
+/* Inside arcs images */
+.inside-arc-image {
+    position: absolute;
+    align-self: start;
+    width: 15vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.inside-arc-image:nth-child(2) {
+    height: 40vh;
+    margin-top: 10vw;
+    margin-left: 10vw;
+}
+
 /* SVG */
 .svgContainer {
     display: flex;

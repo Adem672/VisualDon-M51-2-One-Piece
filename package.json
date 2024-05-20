@@ -1,12 +1,11 @@
 {
   "type": "module",
-  "main": "dist/app.js",
   "name": "visualdon-m51-2-one-piece",
   "version": "1.0.0",
   "description": "Saga East-Blue",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
-    "build": "parcel build src/app.js --no-cache --log-level verbose",
+    "build": "parcel build src/index.html --no-cache --log-level verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

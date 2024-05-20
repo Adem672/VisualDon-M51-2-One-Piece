@@ -66,11 +66,11 @@ document.addEventListener("click", e => {
                 .style('max-width', '700px')
                 .style('z-index', '1000')
                 .html(`<h2>Bienvenue dans notre projet</h2><p>Le but de ce projet est de fournir des informations complètes et détaillées sur la saga East Blue de One
-                Piece. Cette première saga de la célèbre série manga créée par Eiichiro Oda pose les bases de l'épopée en
+                Piece, un manga adapté en version animé également. Cette première saga de la célèbre série manga créée par Eiichiro Oda pose les bases de l'épopée en
                 introduisant les personnages principaux, leurs rêves, et les premiers défis qu'ils doivent surmonter. À
                 travers cette exploration, nous plongerons dans l'univers fascinant de l'East Blue, en mettant en lumière
                 les événements clés, les thèmes centraux et les moments mémorables qui ont captivé des millions de fans à
-                travers le monde.</p><button id="close-info-bubble">Close</button>`);
+                travers le monde.</p><h3>Lohann, Michaël et Adem</h3><button id="close-info-bubble">Fermer</button>`);
 
             // Add event listener to close the info-bubble
             d3.select('#close-info-bubble').on('click', function () {

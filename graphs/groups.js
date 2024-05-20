@@ -153,7 +153,7 @@ export function createGroup(characters) {
             .style('text-align', 'center')
             .style('max-width', '300px')
             .style('z-index', '1000')
-            .html(`<h2>${character.replaceAll("_", " ")}</h2><p>${getCharacterInfo(character)}</p><button id="close-info-bubble">Close</button>`);
+            .html(`<h2>${character.replaceAll("_", " ")}</h2><p>${getCharacterInfo(character)}</p><button id="close-info-bubble">Fermer</button>`);
 
         // Add event listener to close the info-bubble
         d3.select('#close-info-bubble').on('click', function () {

@@ -65,6 +65,28 @@ main section.active {
     padding-top: 3vh;
 }
 
+.introduction {
+    font-family: "One Piece", sans-serif;
+    font-size: 1rem !important;
+    width: fit-content;
+    text-align: left;
+    letter-spacing: .7rem;
+    margin: 20px;
+    /* Ajout de marge */
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: absolute;
+    /* Changement de position à absolute */
+    top: 0;
+    /* Positionnement en haut */
+    left: 0;
+    /* Positionnement à gauche */
+    z-index: 2;
+}
+
+
+
 .saga-subtitle {
     font-family: "One Piece", sans-serif;
     font-size: 3rem;

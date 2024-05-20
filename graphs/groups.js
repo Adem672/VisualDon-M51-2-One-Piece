@@ -120,8 +120,53 @@ export function createGroup(characters) {
                 text.transition().duration(animationDuration).style('opacity', 0); // Hide text with transition
                 gradient.transition().duration(animationDuration).style('filter', 'brightness(100%)');
                 image.transition().duration(animationDuration).style('filter', 'brightness(100%)');
+            })
+
+            .on('click', function (event) {
+                showCharacterInfo(event, d);
             });
-    })
+    });
+
+    function showCharacterInfo(event, character) {
+        // Remove any existing info-bubble
+        d3.selectAll('.info-bubble').remove();
+
+        // Get the viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the position for the bubble to be in the center of the viewport
+        const centerX = viewportWidth / 2;
+        const centerY = viewportHeight / 2;
+
+        // Create and style the info-bubble
+        const bubble = d3.select('body').append('div')
+            .attr('class', 'info-bubble')
+            .style('position', 'fixed') // Use 'fixed' to position relative to the viewport
+            .style('left', `${centerX}px`)
+            .style('top', `${centerY}px`)
+            .style('transform', 'translate(-50%, -50%)')
+            .style('padding', '20px')
+            .style('background', 'rgba(0, 0, 0, 0.8)')
+            .style('color', 'white')
+            .style('border-radius', '10px')
+            .style('text-align', 'center')
+            .style('max-width', '300px')
+            .style('z-index', '1000')
+            .html(`<h2>${character.replaceAll("_", " ")}</h2><p>${getCharacterInfo(character)}</p><button id="close-info-bubble">Close</button>`);
+
+        // Add event listener to close the info-bubble
+        d3.select('#close-info-bubble').on('click', function () {
+            bubble.remove();
+        });
+    }
+
+
+
+    function getCharacterInfo(character) {
+        // Assuming there's a description field for each character in data
+        return data.Crew[character]?.description || data.Enemies[character]?.description || "No information available.";
+    }
 
     return svg.node();
 }

@@ -1,93 +1,122 @@
 {
     "Crew": {
         "Luffy": {
-            "Nom": "Luffy"
+            "Nom": "Luffy",
+            "description": "Le capitaine des Chapeaux de Paille, possédant le pouvoir du fruit du démon Gomu Gomu qui le rend élastique."
         },
         "Zoro": {
-            "Nom": "Zoro"
+            "Nom": "Zoro",
+            "description": "Le sabreur des Chapeaux de Paille, utilisant un style de combat unique à trois épées."
         },
         "Nami": {
-            "Nom": "Nami"
+            "Nom": "Nami",
+            "description": "La navigatrice des Chapeaux de Paille, experte en cartographie et en météorologie."
         },
         "Usopp": {
-            "Nom": "Usopp"
+            "Nom": "Usopp",
+            "description": "Le tireur d'élite des Chapeaux de Paille, connu pour ses mensonges et son courage en évolution."
         },
         "Sanji": {
-            "Nom": "Sanji"
+            "Nom": "Sanji",
+            "description": "Le cuisinier des Chapeaux de Paille, un maître du combat au corps à corps avec ses jambes."
         }
     },
     "Enemies": {
         "Alvida": {
-            "Nom": "Alvida"
+            "Nom": "Alvida",
+            "description": "Une pirate qui a mangé le fruit du démon Sube Sube, la rendant glissante et belle."
         },
         "Morgan": {
-            "Nom": "Morgsn"
+            "Nom": "Morgan",
+            "description": "Un capitaine de la Marine corrompu, connu pour sa main-hache."
         },
         "Hermep": {
-            "Nom": "Hermep"
+            "Nom": "Hermep",
+            "description": "Le fils de Morgan, initialement arrogant et lâche."
         },
         "Marines": {
-            "Nom": "Marines"
+            "Nom": "Marines",
+            "description": "L'organisation militaire mondiale chargée de maintenir l'ordre et de combattre les pirates."
         },
         "Baggy": {
-            "Nom": "Baggy"
+            "Nom": "Baggy",
+            "description": "Un pirate clown ayant mangé le fruit du démon Bara Bara, lui permettant de se séparer en morceaux."
         },
         "Morge": {
-            "Nom": "Morge"
+            "Nom": "Morge",
+            "description": "Un membre de l'équipage de Baggy, souvent vu avec son lion domestiqué, Richie."
         },
         "Richie": {
-            "Nom": "Richie"
+            "Nom": "Richie",
+            "description": "Un lion domestiqué et membre de l'équipage de Baggy, souvent manipulé par Morge."
         },
         "Carnage": {
-            "Nom": "Carnage"
+            "Nom": "Carnage",
+            "description": "Un des lieutenants de Baggy, connu pour sa brutalité."
         },
         "Kuro": {
-            "Nom": "Kuro"
+            "Nom": "Kuro",
+            "description": "Un pirate notoire et stratège, ancien capitaine des Pirates du Chat Noir."
         },
         "Buchi": {
-            "Nom": "Buchi"
+            "Nom": "Buchi",
+            "description": "Un des membres des Pirates du Chat Noir, connu pour sa force brute."
         },
         "Sham": {
-            "Nom": "Sham"
+            "Nom": "Sham",
+            "description": "Un des membres des Pirates du Chat Noir, connu pour sa rapidité et son agilité."
         },
         "Pirates_du_Chat_Noir": {
-            "Nom": "Pirates du Chat Noir"
+            "Nom": "Pirates du Chat Noir",
+            "description": "Un équipage de pirates dirigé par le capitaine Kuro, connu pour ses tactiques sournoises."
         },
         "Mihawk": {
-            "Nom": "Mihawk"
+            "Nom": "Mihawk",
+            "description": "Le meilleur épéiste du monde, souvent appelé 'Oeil de Faucon'."
         },
         "Don_Krieg": {
-            "Nom": "Don Krieg"
+            "Nom": "Don Krieg",
+            "description": "Un pirate tyrannique avec une armée énorme et des armes sophistiquées."
         },
         "Fullbody": {
-            "Nom": "Fullbody"
+            "Nom": "Fullbody",
+            "description": "Un lieutenant de la Marine, souvent vu comme arrogant et condescendant."
         },
         "Pearl": {
-            "Nom": "Pearl"
+            "Nom": "Pearl",
+            "description": "Un combattant de Don Krieg, connu pour son bouclier de perles et ses attaques enflammées."
         },
         "Gin": {
-            "Nom": "Gin"
+            "Nom": "Gin",
+            "description": "Un des lieutenants de Don Krieg, connu pour ses compétences en combat rapproché et sa loyauté."
         },
         "Arlong": {
-            "Nom": "Arlong"
+            "Nom": "Arlong",
+            "description": "Un homme-poisson cruel et puissant, ancien membre de l'équipage des Pirates du Soleil."
         },
         "Kuroobi": {
-            "Nom": "Kuroobi"
+            "Nom": "Kuroobi",
+            "description": "Un homme-poisson et combattant de karaté, membre de l'équipage d'Arlong."
         },
         "Hachi": {
-            "Nom": "Hachi"
+            "Nom": "Hachi",
+            "description": "Un homme-poisson et épéiste utilisant six épées simultanément, membre de l'équipage d'Arlong."
         },
         "Smack": {
-            "Nom": "Smack"
+            "Nom": "Smack",
+            "description": "Un des subordonnés d'Arlong, un homme-poisson puissant."
         },
         "Meuh_Meuh": {
-            "Nom": "Meuh-Meuh"
+            "Nom": "Meuh-Meuh",
+            "description": "Un vache de mer géante, souvent utilisée par les pirates hommes-poissons pour attaquer."
         },
         "Smoker": {
-            "Nom": "Smoker"
+            "Nom": "Smoker",
+            "description": "Un capitaine de la Marine possédant le pouvoir du fruit du démon Moku Moku, lui permettant de se transformer en fumée."
         },
         "Tashigi": {
-            "Nom": "Tashigi"
+            "Nom": "Tashigi",
+            "description": "Une épéiste et sous-officier de la Marine, souvent vue aux côtés de Smoker."
         }
     }
 }
